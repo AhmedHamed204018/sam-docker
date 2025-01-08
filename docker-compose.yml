@@ -2,7 +2,7 @@ version: '2'
 
 services:
   node-app:
-    image: ahmedhamed204018/test-docker:latest
+    image: ahmedhamed204018/sam-docker
     env_file:
       - ./.env
     depends_on:
