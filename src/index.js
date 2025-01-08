@@ -55,7 +55,7 @@ mongoose.connect(URI).then(() => console.log('Connected to MongoDB successfully!
 app.get('/', (req, res)=> {
     redisclient.set('products', 'product...');
     console.log(`traffic from ${os.hostname}`);	
-    res.send('<h1>hello ahmed with aws again</h1>');
+    res.send('<h1>hello ahmed with aws again push and pull</h1>');
 });
 
 
