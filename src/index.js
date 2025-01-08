@@ -7,7 +7,7 @@ const os = require('os');
 
 
 // init app
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 const REDIS_HOST = 'redis';
 const REDIS_PORT = 6379;
