@@ -9,7 +9,7 @@ services:
       update configs:
         parallelism: 2
         delay: 10s
-      restart_plolicy:  
+      restart_policy:  
         condiotion: on-failure
         delay: 5s
     depends_on:
