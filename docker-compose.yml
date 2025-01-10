@@ -4,14 +4,14 @@ services:
     image: ahmedhamed204018/sam-docker
     env_file:
       - ./.env
-    deploy:
-      replicas: 4
-      update configs:
-        parallelism: 2
-        delay: 10s
-      restart_plolicy:  
-        condiotion: on-failure
-        delay: 5s
+    # deploy:
+    #   replicas: 4
+    #   update configs:
+    #     parallelism: 2
+    #     delay: 10s
+    #   restart_plolicy:  
+    #     condiotion: on-failure
+    #     delay: 5s
     depends_on:
       - redis
       - mongo
