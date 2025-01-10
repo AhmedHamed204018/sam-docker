@@ -1,20 +1,16 @@
-FROM node as base
-
-
-FROM base as development
-
+FROM node
 WORKDIR /app
 COPY  package.json .
-RUN npm install
-COPY . .
-EXPOSE 5000
-CMD [ "npm","run", "start-dev" ]
 
-FROM base as production
 
-WORKDIR /app
-COPY  package.json .
-RUN npm install --only=production
+ARG NODE_ENV
+RUN if [ "${NODE_ENV}" = "development" ]; \
+    then npm install; \
+    else npm install --only=production; \
+    fi
+    
 COPY . .
-EXPOSE 5000
-CMD [ "npm","start" ]
+ENV PORT 5000
+EXPOSE $PORT
+
+CMD ["npm", "start_dev", "run" ]
