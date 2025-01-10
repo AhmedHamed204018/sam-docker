@@ -1,4 +1,3 @@
-
 services:
   node-app:
     image: ahmedhamed204018/sam-docker
