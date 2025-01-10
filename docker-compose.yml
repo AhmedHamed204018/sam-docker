@@ -6,7 +6,7 @@ services:
       - ./.env
     deploy:
       replicas: 4
-      update configs:
+      update config:
         parallelism: 2
         delay: 10s
       restart_policy:  
